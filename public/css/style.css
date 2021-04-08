@@ -7607,6 +7607,14 @@ button {
   letter-spacing: 0.05rem; }
   button:focus {
     outline: 2px dotted #55d7dc; }
+    
+.controls button{
+    border: 1px solid white;
+    border-radius: 10px;
+    padding:20px;
+    margin: 5px;
+    color:white;
+}
 
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */

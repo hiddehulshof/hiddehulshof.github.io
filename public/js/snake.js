@@ -92,6 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const scoreDisplay = document.querySelector('span')
   const startBtn = document.querySelector('.start')
 
+  const upBtn = document.querySelector('.up')
+  const leftBtn = document.querySelector('.left')
+  const rightBtn = document.querySelector('.right')
+  const downBtn = document.querySelector('.down')
+
+
   const width = 10
   let currentIndex = 0 //so first div in our grid
   let appleIndex = 0 //so first div in our grid
@@ -177,6 +183,29 @@ document.addEventListener('DOMContentLoaded', () => {
       direction = +width //if we press down, the snake head will instantly appear in the div ten divs from where you are now
     }
   }
+  
+  function goUp() {
+    squares[currentIndex].classList.remove('snake')
+    direction = -width // if we press the up arrow, the snake will go back ten divs, appearing to go up
+  }
+  function goLeft() {
+    squares[currentIndex].classList.remove('snake')
+    direction = -1 // if we press left, the snake will go left one div
+  }
+  function goRight() {
+    squares[currentIndex].classList.remove('snake')
+    direction = 1 //if we press the right arrow on our keyboard, the snake will go right one
+  }
+  function goDown() {
+    squares[currentIndex].classList.remove('snake')
+    direction = +width //if we press down, the snake head will instantly appear in the div ten divs from where you are now
+  }
+  
+  upBtn.addEventListener('click', goUp)
+  leftBtn.addEventListener('click', goLeft)
+  rightBtn.addEventListener('click', goRight)
+  downBtn.addEventListener('click', goDown)
+
 
   document.addEventListener('keyup', control)
   startBtn.addEventListener('click', startGame)
