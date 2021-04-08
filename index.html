@@ -76,7 +76,7 @@
                     <div class="social-container">
 
                         <h1 class="pb-4">Hidde Hulshof</h1>
-                        <b class="mb-2">PHP developer </b>
+                        <b class="mb-2">Fullstack developer </b>
                         <ul class="social-icons mt-2">
                             <li><a href="https://www.linkedin.com/in/hidde-hulshof-936773193/"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -130,7 +130,7 @@
                 </a>
                 <a href="#" v-scroll-to="'#wat'" @click="toggleSideSlow()"
                    class="navbar-brand d-flex align-items-center">
-                    <strong>Wat doe ik?</strong>
+                    <strong>Mijn skills</strong>
                 </a>
                 <a href="#" v-scroll-to="'#proj'" @click="toggleSideSlow()"
                    class="navbar-brand d-flex align-items-center">
@@ -159,7 +159,7 @@
                     <strong>Wie ben ik?</strong>
                 </a>
                 <a href="#" v-scroll-to="'#wat'" class="navbar-brand d-flex align-items-center">
-                    <strong>Wat doe ik?</strong>
+                    <strong>Mijn skills</strong>
                 </a>
                 <a href="#" v-scroll-to="'#proj'" class="navbar-brand d-flex align-items-center">
                     <strong>Mijn projecten</strong>
@@ -192,7 +192,7 @@
                 <strong>Wie ben ik?</strong>
             </a>
             <a href="#" v-scroll-to="'#wat'" class="navbar-brand d-flex align-items-center">
-                <strong>Wat doe ik?</strong>
+                <strong>Mijn skills</strong>
             </a>
             <a href="#" v-scroll-to="'#proj'" class="navbar-brand d-flex align-items-center">
                 <strong>Mijn projecten</strong>
@@ -260,7 +260,7 @@
 
     <div id="wat" class="divider py-5 ">
         <div class="container">
-            <h1 class="w-100 text-center pb-4">Wat doe ik?</h1>
+            <h1 class="w-100 text-center pb-4">Mijn skills</h1>
 
 
             <div class="row pb-4 col-md-8 mx-auto">
@@ -501,160 +501,7 @@
 
 
         <div id="proj" class="projects py-5 bg-light">
-            <div class="container-fluid">
-                <div class="row content-block">
-                    <div class="col-12">
-                        <h1 class="w-100 pb-4 text-center">Projecten</h1>
-                    </div>
-                </div>
-                <div class="row height-projects">
-                    <div class="col-md-4 height-projectnav d-flex align-items-center">
-                        <div class=" mb-4 box-shadow position-absolute left-0 ">
 
-                            <ul class="project-list">
-                                <li @click="showproj(1) " :class="{backgroundaccent: project==1}">Point of sales</li>
-                                <!--                            :class="{greyscale: next!=1}"-->
-                                <li @click="showproj(2)" :class="{backgroundaccent: project==2}">Voorraadbeheer</li>
-
-                                <li @click="showproj(3)" :class="{backgroundaccent: project==3}">Browserprinting</li>
-
-                                <li @click="showproj(4)" :class="{backgroundaccent: project==4}">Sharepoint koppeling/graph API</li>
-
-                                <li @click="showproj(5)" :class="{backgroundaccent: project==5}">MyParcel/TrunkRS</li>
-
-
-                            </ul>
-                        </div>
-                    </div>
-
-                    <transition name="slide-fade-right">
-                        <div v-if="project==1 && showproject != 0" class="col-md-8 d-flex align-items-center">
-                            <div class="card mb-4 box-shadow">
-
-                                <div class="card-body">
-                                    <b class="card-title">Point of sales</b>
-                                    <!--                                <img  class="projectpicture" src="public/resources/graaf.PNG">-->
-                                    <p class="card-text"> </p>
-                                    <b>De functies die ik heb gebouwd/uitgebreid</b>
-                                    <ul>
-                                        <li>Bonnen parkeren</li>
-                                        <li>Product korting toekennen</li>
-                                        <li>Bonnen printen via een Starprinter</li>
-                                        <li>Geld afromen</li>
-                                        <li>Producten afschrijven via de kassa</li>
-                                        <li>Kassabonnen kunnen retourneren</li>
-                                        <li>Voorraad inzichtelijk gemaakt</li>
-                                        <li>Dagrapport</li>
-                                        <li>Deelbetalingen Pin/contant</li>
-                                        <li>Bestellingen op rekening/klant</li>
-
-
-                                    </ul>
-                                    <small class="techtext">Technieken:</small><br>
-
-                                    <div class="d-flex justify-content-between align-items-center">
-
-                                        <div class="btn-group">
-                                            <div class="label mx-1">Laravel</div>
-                                            <div class="label mx-1">HTML5</div>
-                                            <div class="label mx-1">Vue</div>
-                                        </div>
-                                        <div class="col-md-6 d-flex justify-content-end align-items-center">
-                                            <a @click="more=1, overlay=true" data-text="Klik hier"
-                                               class="button-hover">Meer</a>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </transition>
-
-
-                    <transition name="slide-fade-custom">
-                        <div v-if="project==1 && showproject != 0 && more == 1" class="dividerprojects">
-
-                            <div v-if="project==1 && showproject != 0 && more == 1" class="col-md-12 ">
-                                <h1 class="text-center p-5">Foto's</h1>
-                                <div @click="more = 0, overlay = false" class="close hamburger"><i
-                                        class="fa fa-times"></i>
-                                </div>
-                                <div class="images pb-5">
-                                    <img class="py-2" src="public/resources/graaf.PNG">
-                                    <img class="py-2" src="public/resources/graaf2.PNG">
-                                    <img class="py-2" src="public/resources/graaf3.PNG">
-                                </div>
-                            </div>
-                        </div>
-                    </transition>
-
-                    <transition name="slide-fade-right">
-                        <div v-if="project==2  && showproject != 0" class="col-md-8 d-flex align-items-center">
-
-
-                            <div class="card mb-4 box-shadow">
-
-                                <div class="card-body">
-                                    <b class="card-title">PokeAPI</b>
-                                    <!--                                <img  class="projectpicture" src="public/resources/graaf.PNG">-->
-                                    <p class="card-text"></p>
-                                    <small class="techtext">Technieken:</small><br>
-
-                                    <div class="d-flex justify-content-between align-items-center">
-
-                                        <div class="btn-group">
-                                            <div class="label mx-1">Vue</div>
-                                            <div class="label mx-1">HTML5</div>
-                                        </div>
-                                        <div class="col-md-6 d-flex justify-content-end align-items-center">
-                                            <a href="#" data-text="Klik hier" class="button-hover">Meer</a>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </transition>
-                    <transition name="slide-fade-right">
-                        <div v-if="project==3 && showproject != 0" class="col-md-8 d-flex align-items-center">
-                            <div class="card mb-4 box-shadow">
-
-                                <div class="card-body">
-                                    <b class="card-title">Eventplanner</b>
-                                    <p class="card-text">
-                                        Tijdens mijn opleiding Applicatie ontwikkeling kregen we een opdracht van een
-                                        externe opdrachtgever Covadis. De opdracht was het ontwikkelen van een
-                                        bedrijfsuitjesplanner, met deze applicatie moesten werknemers zich kunnen
-                                        inschrijven voor bedrijfsuitjes. De front-end werd ontwikkeld met AngularJS en
-                                        de
-                                        backend hebben wij ontwikkeld met behulp van een ASP.net API.
-                                        Deze API was beveiligd met behulp van een JWT token.
-                                    </p>
-                                    <b>De applicatie bevatte onder andere de onderstaande functionaliteiten:</b>
-                                    <ul>
-                                        <li>Inloggen/registreren</li>
-                                        <li>Evenement aanmaken, verwijderen en aanpassen</li>
-                                        <li>Inschrijven voor een evenement</li>
-                                        <li>Overzicht van voorbije evenementen inzien</li>
-                                        <li>Plaatsen van opmerking bij inschrijving</li>
-
-                                    </ul>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <div class="label mx-1">ASP.net</div>
-                                            <div class="label mx-1">Angular</div>
-                                        </div>
-                                        <small class="text-muted">9 mins</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </transition>
-                </div>
-            </div>
         </div>
     </div>
     </div>
@@ -663,31 +510,7 @@
             <section class="timeline">
                 <h1 class="text-center">Mijn werkervaring</h1>
                 <ul id="time1">
-                    <li>
-                        <div>
-                            <time> Juli 2010</time>
-                            <b>Groenspecialist Bosman</b><br>
-                            Mijn eerste vakantiebaantje was onkruidplukken/schoffelen bij groenspecialist Bosman in
-                            hengelo Gelderland, Hier leerde ik zelfstandig werken.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time> Februari 2014 – Juli 2014</time>
-                            <b> GOMA </b><br>
-                            Tijdens een tussenjaar heb ik een aantal maanden als productiemedewerker bij de GOMA in
-                            Hengelo Gelderland gewerkt.
-                            Hier werkte ik op verschillende afdelingen en leerde ik werken in teamverband.
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <time>April 2015 - Januari 2017</time>
-                            <b>Eskes Event Cleaning</b><br>
-                            Hier leerde ik om goed samen te werken en om oplossingsgericht te werken, vaak kregen we
-                            hier zelf de verantwoordelijkheid om de afvoer van afval op een festival te regelen.
-                        </div>
-                    </li>
+    
                     <li>
                         <div>
                             <time> Februari 2017 - Juli 2017</time>
@@ -711,7 +534,25 @@
                             <b>Niice digital marketing Groenlo</b><br>
 
                             Bij Niice leerde ik werken aan projecten voor klanten, hierbij moest ik een ontwerp compleet
-                            ombouwen naar HMTL, CSS en JAVASCRIPT. Ook leerde ik hier werken met Craft.
+                            ombouwen naar HMTL, CSS en JAVASCRIPT. Ook leerde ik hier werken met Craft. Ook leerde ik hier kennismaken met de Git Flow
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div>
+                            <time> September 2020 - November 2021</time>
+                            <b>Mull2media</b><br>
+                            <p>Bij Mull2media heb ik mijn eindstage gelopen, Mull2media heb ik bewust uitgekozen omdat ze veel het Laravel. Bij Mull2media heb ik geleerd om grote projecten (WMS, POS, Voorraadbeheer) en koppelingen (Trunkrs, MyParcel) zelfstandig te ontwikkelen/doorontwikkelen, ook heb ik hier geleerd om veel te communiceren met klanten.</p>
+                            <p>Mijn stage heb ik hier succesvol afgerond en kon hier blijven werken. Mijn voornaamste werkzamheden bij Mull2media waren HTML, CSS, (scss), JQuery, VueJS en Laravel. Ook heb ik hier mijn kennis vergroot over de Git Flow.</p>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div>
+                            <time> November 2020 - Heden</time>
+                            <b>VoorMeerWaarde</b><br>
+                            <p>Bij VoorMeerWaarde heb ik geleerd om te werken met Design Systems en heb ik actief gewerkt voor WCAG.nl, hierdoor heb ik kennis van webtoegankelijkheid. Bij VoorMeerWaarde zijn mijn voornaamste werkzaamheden HTML, CSS (scss), Javascript, Vuejs en Laravel. </p>
+                            <p>Bij VoorMeerWaarde heb ik voor het eerst kennis gemaakt met Confluence en Jira in combinatie met Git Flow.</p>
                         </div>
                     </li>
 
@@ -776,7 +617,7 @@
 
     </div>
 
-    <div id="con" class="dividerhalf container-fluid  d-flex justify-content-center align-items-center ">
+    <!-- <div id="con" class="dividerhalf container-fluid  d-flex justify-content-center align-items-center ">
         <div class="container mx-auto row text-center">
             <div class="col-12 mx-auto"><h1 class="py-4">Wil je meer van mij weten?</h1></div>
             <div class="max-heigth col-12 d-flex align-items-center justify-content-center"><a
@@ -785,7 +626,7 @@
             </a></div>
         </div>
 
-    </div>
+    </div> -->
 </main>
 
 <footer class="footer ">
