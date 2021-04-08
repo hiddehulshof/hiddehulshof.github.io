@@ -7171,7 +7171,7 @@ body {
   background: linear-gradient(-90deg, #b40800, #0f6674, #857E7B, #b3b400);
   background-size: 150% 150%;
   animation: gradient 30s ease infinite;
-  align-items: flex-end;
+  align-items: center;
   border-top: 1vh solid #79B4A9;
   border-bottom: 1vh solid #79B4A9;
 
@@ -7608,13 +7608,23 @@ button {
   button:focus {
     outline: 2px dotted #55d7dc; }
     
+    
+    .controls{
+        max-height: 250px!important;
+
+    }
 .controls button{
     border: 1px solid white;
     border-radius: 10px;
-    padding:20px;
+    padding:20px!important;
+    font-size: 2rem!important;
     margin: 5px;
     color:white;
+
+    
+
 }
+
 
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */
