@@ -44,29 +44,6 @@
     <script>
     window.onload = function(){
 			
-				document.getElementById("btnGetGames").addEventListener(
-					"click",
-					function(ev){
-						let url = 'https://bgg-json.azurewebsites.net/collection/edwalter';
-						fetch(url).then(
-							response => {
-								return response.json();
-							}
-						).then(
-							result => {
-								result = result.map(item=>`<li>${item.name}</li>`)
-									  .join('');
-								document.body.innerHTML += `<ul>${result}</ul>`;
-							}
-						).catch(
-							fout => {
-								console.log(`Ging iets fout: ${fout}`);
-							}
-						);
-					}
-				);
-			
-			
 				if ('serviceWorker' in navigator) {
 					navigator.serviceWorker.register('sw.js').then(
 						registratie=> {
